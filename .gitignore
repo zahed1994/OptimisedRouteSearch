@@ -1,0 +1,44 @@
+# Scala/SBT build files
+target/
+project/target/
+project/project/target/
+dist/
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+*.ipr
+*.iws
+
+# SBT specific
+.sbtopts
+.jvmopts
+
+# Metals/Bloop
+.metals/
+.bloop/
+project/.bloop/
+
+# OS specific
+Thumbs.db
+
+# Local development
+local.conf
+*.log
+
+# Scala specific
+.scala_dependencies
+.scalac_cache/
