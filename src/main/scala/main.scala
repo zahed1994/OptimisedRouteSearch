@@ -89,8 +89,15 @@ def demonstrateUsage(): Unit =
     case Left(error) => IOHandler.displayError(error)
   }
 
+  // Test V2 Bidirectional Dijkstra
+  println("\n4️⃣  V2 Optimized - Bidirectional Dijkstra with Pruning:")
+  RouteService.findRoute(graph, "A", "E", RouteService.BidirectionalDijkstraV2) match {
+    case Right(route) => IOHandler.displayRoute(route)
+    case Left(error) => IOHandler.displayError(error)
+  }
+
   // Test all paths from a node
-  println("\n4️⃣  All paths from node 'A':")
+  println("\n5️⃣  All paths from node 'A':")
   RouteService.findAllPaths(graph, "A") match {
     case Right(routes) =>
       routes.foreach { case (nodeId, routeOpt) =>
@@ -103,7 +110,7 @@ def demonstrateUsage(): Unit =
   }
 
   // Display graph as CSV
-  println("\n5️⃣  Graph in CSV format:")
+  println("\n6️⃣  Graph in CSV format:")
   println(IOHandler.graphToCSV(graph))
 
 def findRouteFromArgs(start: String, end: String): Unit =
